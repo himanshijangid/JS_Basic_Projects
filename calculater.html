@@ -25,43 +25,43 @@
 </head>
 <body>
     <h2>Calculater</h2>
-    <form>
-        <b> First Value:</b> <input type="text" id="first" >
+    <!-- <form> -->
+        <b> First Value:</b> <input type="number" id="first" >
         <br>
-        <b>Second  value:</b>  <input type="text" id="second"> 
+        <b>Second  value:</b>  <input type="number" id="second"> 
         <br>
         <button onclick="add()">Add</button>
         <button onclick="sub()">Subtract</button>
         <button onclick="mul()">Multiply</button>
-        <button  onclick="div()">divide</button>
-     </form>
+        <button onclick="div()">divide</button>
+     <!-- </form>-->
      <br>
      <br>
      <b>Showing Result:</b><p id="c"></p>
 
      <script>
         var a,b;
-
-
+        
+        
         function add(){
-        a=document.getElementById('first').value;
-        b=document.getElementById('second').value;
-        document.getElementById("c").innerHTML=a+b;
+            var a=parseInt(document.getElementById('first').value);
+            var b=parseInt(document.getElementById('second').value);
+           document.getElementById("c").innerHTML=a+b;
         };
         function sub(){ 
-        a=document.getElementById("first").value;
-        b=document.getElementById("second").value;
+        a=parseInt(document.getElementById('first').value);
+        b=parseInt(document.getElementById('second').value);
         document.getElementById("c").innerHTML=a-b;
         };
 
         function mul(){
-        a=document.getElementById("first").value;
-        b=document.getElementById("second").value;
+        a=parseInt(document.getElementById('first').value);
+        b=parseInt(document.getElementById('second').value);
         document.getElementById("c").innerHTML=a*b;
         };
         function div(){
-        a=document.getElementById("first").value;
-        b=document.getElementById("second").value;
+        a=parseInt(document.getElementById('first').value);
+        b=parseInt(document.getElementById('second').value);
         document.getElementById("c").innerHTML=a/b;
          };
      </script>
